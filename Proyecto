@@ -1,0 +1,726 @@
+#include <iostream>
+#include <Windows.h>
+#include <string>
+
+int asientos (void);
+using namespace std;
+int Columna [9]={1,2,3,4,5,6,7,8,9}, Matriz [9][16]={0};
+string Filas[13]={"","1","2","3","4","5","6","7","8","9","10","11","12"};
+int TIP, FUN;
+int i, X, l, j, M, Z, R, O, A, Y, RF, P;
+int main ()
+{
+	menu:
+		setlocale(LC_CTYPE, "Spanish");
+		cout <<"\t\tBienvenidos"<<endl;
+		cout <<"\tCARTELERA" <<endl;
+		cout <<"=================================================="<<endl;
+		cout <<"\t1.Alguna Peli1"<<endl;
+		cout <<"\t2.Alguna Peli2"<<endl;
+		cout <<"\t3.Alguna Peli3"<<endl;
+		cout <<"\t4.Alguna Peli4"<<endl;
+		cout <<"==================================================" <<endl;
+		cout <<"Bienvenido a CinesPlataformas, ¿Qué pelicula quiere ver?"; cin>>A;
+		switch (A)
+		{
+			case 1:
+				cout <<"\t\tAlguna Peli1"<<endl;
+				cout <<"\t1. 2D / Cada asiento vale 3.000"<<endl;
+				cout <<"\t2. 3D / Cada asiento vale 4.500"<<endl;
+				cout <<"¿Qué tipo de asiento quiere?"; cin>> TIP;
+				switch (TIP)
+				{
+					case 1:
+						system("cls");
+						cout <<"Eligió el tipo de sala de tipo 2D" <<endl;
+						cout <<"\t1.12:05 p.m" <<endl;
+						cout <<"\t2.15:15 p.m" <<endl;
+						cout <<"\t3.18:35 p.m" <<endl;
+						cout <<"\t4.21:30 p.m" <<endl;
+						cout <<"A qué función quiere asistir?";cin>>FUN;
+						switch (FUN)
+						{
+							case 1:
+								system ("cls");
+								cout << "Eligió la función de las 12:05 p.m"<<endl;
+								asientos ();
+								cout <<"\tPorfavor confirme los siguientes datos:"<<endl;
+								cout <<"\tConfirmación de datos:/n"<<endl;
+								cout <<"\tUsted eligió alguna película1"<<endl;
+								cout <<"\tLa hora de inicio es a las 12:05 y el tipo de sala 2D"<<endl;
+								cout <<"\tReservó "<<P<< "asiento(s), por el valor de"<<3000*P<<"C"<<endl;
+								cout <<"\t1.Si"<<endl;
+								cout <<"\t2.No"<<endl;
+								cin>>RF;
+								if (RF==1)
+								{
+									cout <<"Bienvenido, disfurte su película"<<endl;
+									Sleep(4000);
+									goto final;
+								}
+								else
+								{
+									cout <<"Usted desea:"<<endl;
+									cout <<"\t1.Volver al menú principal"<<endl;
+									cout <<"\t2.Cancelar toda la operación"<<endl;
+								system("cls");
+									if (O==2)
+										goto final;
+									else
+										goto menu;
+								 }
+								break;
+							case 2:
+								system ("cls");
+								cout <<"Escogió la función a las 15:15"<<endl;
+								asientos ();
+								cout <<"\tPorfavor confirme los siguientes datos:"<<endl;
+								cout <<"\tConfirmación de datos:/n"<<endl;
+								cout <<"\tUsted eligió alguna película1"<<endl;
+								cout <<"\tLa hora de inicio es a las 15:15 y el tipo de sala 2D"<<endl;
+								cout <<"\tReservó "<<P<< "asiento(s), por el valor de"<<3000*P<<"C"<<endl;
+								cout <<"\t1.Si"<<endl;
+								cout <<"\t2.No"<<endl;
+								cin>>RF;
+								if (RF==1)
+								{
+									cout<<"Bienvenido, disfrute la pelicula"<<endl;
+									Sleep(4000);
+									goto final;
+								}
+								else
+								{
+									cout <<"Usted desea:"<<endl;
+									cout <<"\t1.Volver al menu principal"<<endl;
+									cout <<"\t2.Cancelar toda la operación"<<endl;
+									cout <<"\t";cin>>O;
+									system ("cls");
+									if (O==2)
+										goto final;
+									else
+										goto menu;
+								}
+								break;	
+							case 3:
+								system ("cls");
+								cout <<"Usted eligió la función de las 18:35"<<endl;
+								asientos ();
+								cout <<"\tPorfavor confirme los siguientes datos:"<<endl;
+								cout <<"\tConfirmación de datos:/n"<<endl;
+								cout <<"\tUsted eligió alguna película1"<<endl;
+								cout <<"\tLa hora de inicio es a las 18:35 y el tipo de sala 2D"<<endl;
+								cout <<"\tReservó "<<P<< "asiento(s), por el valor de"<<3000*P<<"C"<<endl;
+								cout <<"\t1.Si"<<endl;
+								cout <<"\t2.No"<<endl;
+								cin>>RF;
+								if (RF==1)
+								{
+									cout <<"Bienvenido, disfurte su película"<<endl;
+									Sleep(4000);
+									goto final;
+								}
+								else
+								{
+									cout <<"Usted desea:"<<endl;
+									cout <<"\t1.Volver al menú principal"<<endl;
+									cout <<"\t2.Cancelar toda la operación"<<endl;
+								system("cls");
+									if (O==2)
+										goto final;
+									else
+										goto menu;
+							}
+							case 4:
+								system ("cls");
+								cout <<"Usted eligió la función de las 21:30"<<endl;
+								asientos ();
+								cout <<"\tPorfavor confirme los siguientes datos:"<<endl;
+								cout <<"\tConfirmación de datos:/n"<<endl;
+								cout <<"\tUsted eligió alguna película1"<<endl;
+								cout <<"\tLa hora de inicio es a las 21:30 y el tipo de sala 2D"<<endl;
+								cout <<"\tReservó "<<P<< "asiento(s), por el valor de"<<3000*P<<"C"<<endl;
+								cout <<"\t1.Si"<<endl;
+								cout <<"\t2.No"<<endl;
+								cin>>RF;
+								if (RF==1)
+								{
+									cout <<"Bienvenido, disfurte su película"<<endl;
+									Sleep(4000);
+									goto final;
+								}
+								else
+								{
+									cout <<"Usted desea:"<<endl;
+									cout <<"\t1.Volver al menú principal"<<endl;
+									cout <<"\t2.Cancelar toda la operación"<<endl;
+								system("cls");
+									if (O==2)
+										goto final;
+									else
+										goto menu;
+						}
+						}
+				}
+			case 2:
+				cout <<"\t\tAlguna Peli2"<<endl;
+				cout <<"\t1.2D / Cada asiento vale 3.000"<<endl;
+				cout <<"\t2.3D / Cada asiento vale 4.500"<<endl;
+				cout <<"¿A cual desea ingresar?"; cin>> TIP;
+				switch (TIP)
+				{
+					case 1:
+						system("cls");
+						cout <<"Eligió el tipo de sala de tipo 2D" <<endl;
+						cout <<"\t1.11:10 a.m" <<endl;
+						cout <<"\t2.13:05 p.m" <<endl;
+						cout <<"\t3.15:00 p.m" <<endl;
+						cout <<"\t4.19:30 p.m" <<endl;
+						cout <<"A qué función quiere asistir?";cin>>FUN;
+						switch (FUN);
+						{	
+							case 0:
+								system ("cls");
+								cout << "Eligió la función de las 11:10 a.m"<<endl;
+								asientos ();
+								cout <<"\tPorfavor confirme los siguientes datos:"<<endl;
+								cout <<"\tConfirmación de datos:/n"<<endl;
+								cout <<"\tUsted eligió alguna película2"<<endl;
+								cout <<"\tLa hora de inicio es a las 11:10 y el tipo de sala 2D"<<endl;
+								cout <<"\tReservó "<<P<< "asiento(s), por el valor de"<<3000*P<<"C"<<endl;
+								cout <<"\t1.Si"<<endl;
+								cout <<"\t2.No"<<endl;
+								cin>>RF;
+								if (RF==1)
+								{
+									cout <<"Bienvenido, disfurte su película"<<endl;
+									Sleep(4000);
+									goto final;
+								}
+								else
+								{
+									cout <<"Usted desea:"<<endl;
+									cout <<"\t1.Volver al menú principal"<<endl;
+									cout <<"\t2.Cancelar toda la operación"<<endl;
+								system("cls");
+									if (O==2)
+										goto final;
+									else
+										goto menu;
+								 }
+								break;
+							case 2:
+								system ("cls");
+								cout <<"Escogió la función a las 13:05 p.m"<<endl;
+								asientos ();
+								cout <<"\tPorfavor confirme los siguientes datos:"<<endl;
+								cout <<"\tConfirmación de datos:/n"<<endl;
+								cout <<"\tUsted eligió alguna película2"<<endl;
+								cout <<"\tLa hora de inicio es a las 13:05 y el tipo de sala 2D"<<endl;
+								cout <<"\tReservó "<<P<< "asiento(s), por el valor de"<<3000*P<<"C"<<endl;
+								cout <<"\t1.Si"<<endl;
+								cout <<"\t2.No"<<endl;
+								cin>>RF;
+								if (RF==1)
+								{
+									cout<<"Bienvenido, disfrute la pelicula"<<endl;
+									Sleep(4000);
+									goto final;
+								}
+								else
+								{
+									cout <<"Usted desea:"<<endl;
+									cout <<"\t1.Volver al menu principal"<<endl;
+									cout <<"\t2.Cancelar toda la operación"<<endl;
+									cout <<"\t";cin>>O;
+									system ("cls");
+									if (O==2)
+										goto final;
+									else
+										goto menu;
+								}
+								break;	
+							case 3:
+								system ("cls");
+								cout <<"Usted eligió la función de las 15:00 p.m"<<endl;
+								asientos ();
+								cout <<"\tPorfavor confirme los siguientes datos:"<<endl;
+								cout <<"\tConfirmación de datos:/n"<<endl;
+								cout <<"\tUsted eligió alguna película2"<<endl;
+								cout <<"\tLa hora de inicio es a las 15:00 y el tipo de sala 2D"<<endl;
+								cout <<"\tReservó "<<P<< "asiento(s), por el valor de"<<3000*P<<"C"<<endl;
+								cout <<"\t1.Si"<<endl;
+								cout <<"\t2.No"<<endl;
+								cin>>RF;
+								if (RF==1)
+								{
+									cout <<"Bienvenido, disfurte su película"<<endl;
+									Sleep(4000);
+									goto final;
+								}
+								else
+								{
+									cout <<"Usted desea:"<<endl;
+									cout <<"\t1.Volver al menú principal"<<endl;
+									cout <<"\t2.Cancelar toda la operación"<<endl;
+								system("cls");
+									if (O==2)
+										goto final;
+									else
+										goto menu;
+								}
+							case 4:
+								system ("cls");
+								cout <<"Usted eligió la función de las 19:30 p.m"<<endl;
+								asientos ();
+								cout <<"\tPorfavor confirme los siguientes datos:"<<endl;
+								cout <<"\tConfirmación de datos:/n"<<endl;
+								cout <<"\tUsted eligió alguna película2"<<endl;
+								cout <<"\tLa hora de inicio es a las 19:30 y el tipo de sala 2D"<<endl;
+								cout <<"\tReservó "<<P<< "asiento(s), por el valor de"<<3000*P<<"C"<<endl;
+								cout <<"\t1.Si"<<endl;
+								cout <<"\t2.No"<<endl;
+								cin>>RF;
+								if (RF==1)
+								{
+									cout <<"Bienvenido, disfurte su película"<<endl;
+									Sleep(4000);
+									goto final;
+								}
+								else
+								{
+									cout <<"Usted desea:"<<endl;
+									cout <<"\t1.Volver al menú principal"<<endl;
+									cout <<"\t2.Cancelar toda la operación"<<endl;
+								system("cls");
+									if (O==2)
+										goto final;
+									else
+										goto menu;
+						}
+					}
+			}
+			case 3:
+				cout <<"\t\tAlguna Peli2"<<endl;
+				cout <<"\t1.2D / Cada asiento vale 3.000"<<endl;
+				cout <<"\t2.3D / Cada asiento vale 4.500"<<endl;
+				cout <<"¿A cual desea ingresar?"; cin>> TIP;
+				switch (TIP)
+				{
+					case 1:
+						system("cls");
+						cout <<"Eligió el tipo de sala de tipo 2D" <<endl;
+						cout <<"\t1.15:45 p.m" <<endl;
+						cout <<"\t2.17:10 p.m" <<endl;
+						cout <<"\t3.18:35 p.m" <<endl;
+						cout <<"\t4.20:00 p.m" <<endl;
+						cout <<"A qué función quiere asistir?";cin>>FUN;
+						switch (FUN)
+						{	case 1:
+								system ("cls");
+								cout << "Eligió la función de las 15:45 p.m"<<endl;
+								asientos ();
+								cout <<"\tPorfavor confirme los siguientes datos:"<<endl;
+								cout <<"\tConfirmación de datos:/n"<<endl;
+								cout <<"\tUsted eligió alguna película3"<<endl;
+								cout <<"\tLa hora de inicio es a las 15:45 y el tipo de sala 2D"<<endl;
+								cout <<"\tReservó "<<P<< "asiento(s), por el valor de"<<3000*P<<"C"<<endl;
+								cout <<"\t1.Si"<<endl;
+								cout <<"\t2.No"<<endl;
+								cin>>RF;
+								if (RF==1)
+								{
+									cout <<"Bienvenido, disfurte su película"<<endl;
+									Sleep(4000);
+									goto final;
+								}
+								else
+								{
+									cout <<"Usted desea:"<<endl;
+									cout <<"\t1.Volver al menú principal"<<endl;
+									cout <<"\t2.Cancelar toda la operación"<<endl;
+								system("cls");
+									if (O==2)
+										goto final;
+									else
+										goto menu;
+								 }
+								break;
+							case 2:
+								system ("cls");
+								cout <<"Escogió la función a las 17:10 p.m"<<endl;
+								asientos ();
+								cout <<"\tPorfavor confirme los siguientes datos:"<<endl;
+								cout <<"\tConfirmación de datos:/n"<<endl;
+								cout <<"\tUsted eligió alguna película3"<<endl;
+								cout <<"\tLa hora de inicio es a las 17:10 y el tipo de sala 2D"<<endl;
+								cout <<"\tReservó "<<P<< "asiento(s), por el valor de"<<3000*P<<"C"<<endl;
+								cout <<"\t1.Si"<<endl;
+								cout <<"\t2.No"<<endl;
+								cin>>RF;
+								if (RF==1)
+								{
+									cout<<"Bienvenido, disfrute la pelicula"<<endl;
+									Sleep(4000);
+									goto final;
+								}
+								else
+								{
+									cout <<"Usted desea:"<<endl;
+									cout <<"\t1.Volver al menu principal"<<endl;
+									cout <<"\t2.Cancelar toda la operación"<<endl;
+									cout <<"\t";cin>>O;
+									system ("cls");
+									if (O==2)
+										goto final;
+									else
+										goto menu;
+								}
+								break;	
+							case 3:
+								system ("cls");
+								cout <<"Usted eligió la función de las 18:35 p.m"<<endl;
+								asientos ();
+								cout <<"\tPorfavor confirme los siguientes datos:"<<endl;
+								cout <<"\tConfirmación de datos:/n"<<endl;
+								cout <<"\tUsted eligió alguna película1"<<endl;
+								cout <<"\tLa hora de inicio es a las 18:35 y el tipo de sala 2D"<<endl;
+								cout <<"\tReservó "<<P<< "asiento(s), por el valor de"<<3000*P<<"C"<<endl;
+								cout <<"\t1.Si"<<endl;
+								cout <<"\t2.No"<<endl;
+								cin>>RF;
+								if (RF==1)
+								{
+									cout <<"Bienvenido, disfurte su película"<<endl;
+									Sleep(4000);
+									goto final;
+								}
+								else
+								{
+									cout <<"Usted desea:"<<endl;
+									cout <<"\t1.Volver al menú principal"<<endl;
+									cout <<"\t2.Cancelar toda la operación"<<endl;
+								system("cls");
+									if (O==2)
+										goto final;
+									else
+										goto menu;
+								}
+							case 4:
+								system ("cls");
+								cout <<"Usted eligió la función de las 20:00 p.m"<<endl;
+								asientos ();
+								cout <<"\tPorfavor confirme los siguientes datos:"<<endl;
+								cout <<"\tConfirmación de datos:/n"<<endl;
+								cout <<"\tUsted eligió alguna película3"<<endl;
+								cout <<"\tLa hora de inicio es a las 20:00 y el tipo de sala 2D"<<endl;
+								cout <<"\tReservó "<<P<< "asiento(s), por el valor de"<<3000*P<<"C"<<endl;
+								cout <<"\t1.Si"<<endl;
+								cout <<"\t2.No"<<endl;
+								cin>>RF;
+								if (RF==1)
+								{
+									cout <<"Disfurte su película"<<endl;
+									Sleep(4000);
+									goto final;
+								}
+								else
+								{
+									cout <<"Usted desea:"<<endl;
+									cout <<"\t1.Volver al menú principal"<<endl;
+									cout <<"\t2.Cancelar toda la operación"<<endl;
+								system("cls");
+									if (O==2)
+										goto final;
+									else
+										goto menu;
+						}
+					}
+			}
+			case 4:
+				cout <<"\t\tAlguna Peli2"<<endl;
+				cout <<"\t1.2D / Cada asiento vale 3.000"<<endl;
+				cout <<"\t2.3D / Cada asiento vale 4.500"<<endl;
+				cout <<"¿A cual desea ingresar?"; cin>> TIP;
+				switch (TIP)
+				{
+					case 1:
+						system("cls");
+						cout <<"Eligió el tipo de sala de tipo 2D" <<endl;
+						cout <<"\t1.14:15 p.m" <<endl;
+						cout <<"\t2.16:45 p.m" <<endl;
+						cout <<"\t3.18:50 p.m" <<endl;
+						cout <<"\t4.20:45 p.m" <<endl;
+						cout <<"A qué función quiere asistir?";cin>>FUN;
+						switch (FUN)
+						{	case 1:
+								system ("cls");
+								cout << "Eligió la función de las 14:15 p.m"<<endl;
+								asientos ();
+								cout <<"\tPorfavor confirme los siguientes datos:"<<endl;
+								cout <<"\tConfirmación de datos:/n"<<endl;
+								cout <<"\tUsted eligió alguna película4"<<endl;
+								cout <<"\tLa hora de inicio es a las 14:15 y el tipo de sala 2D"<<endl;
+								cout <<"\tReservó "<<P<< "asiento(s), por el valor de"<<3000*P<<"C"<<endl;
+								cout <<"\t1.Si"<<endl;
+								cout <<"\t2.No"<<endl;
+								cin>>RF;
+								if (RF==1)
+								{
+									cout <<"Bienvenido, disfurte su película"<<endl;
+									Sleep(4000);
+									goto final;
+								}
+								else
+								{
+									cout <<"Usted desea:"<<endl;
+									cout <<"\t1.Volver al menú principal"<<endl;
+									cout <<"\t2.Cancelar toda la operación"<<endl;
+								system("cls");
+									if (O==2)
+										goto final;
+									else
+										goto menu;
+								 }
+								break;
+							case 2:
+								system ("cls");
+								cout <<"Escogió la función a las 16:45 p.m"<<endl;
+								asientos ();
+								cout <<"\tPorfavor confirme los siguientes datos:"<<endl;
+								cout <<"\tConfirmación de datos:/n"<<endl;
+								cout <<"\tUsted eligió alguna película1"<<endl;
+								cout <<"\tLa hora de inicio es a las 16:45 y el tipo de sala 2D"<<endl;
+								cout <<"\tReservó "<<P<< "asiento(s), por el valor de"<<3000*P<<"C"<<endl;
+								cout <<"\t1.Si"<<endl;
+								cout <<"\t2.No"<<endl;
+								cin>>RF;
+								if (RF==1)
+								{
+									cout<<"Disfrute la pelicula"<<endl;
+									Sleep(4000);
+									goto final;
+								}
+								else
+								{
+									cout <<"Usted desea:"<<endl;
+									cout <<"\t1.Volver al menu principal"<<endl;
+									cout <<"\t2.Cancelar toda la operación"<<endl;
+									cout <<"\t";cin>>O;
+									system ("cls");
+									if (O==2)
+										goto final;
+									else
+										goto menu;
+								}
+								break;
+							case 3:
+								system ("cls");
+								cout <<"Usted eligió la función de las 18:50 p.m"<<endl;
+								asientos ();
+								cout <<"\tPorfavor confirme los siguientes datos:"<<endl;
+								cout <<"\tConfirmación de datos:/n"<<endl;
+								cout <<"\tUsted eligió alguna película4"<<endl;
+								cout <<"\tLa hora de inicio es a las 18:50 y el tipo de sala 2D"<<endl;
+								cout <<"\tReservó "<<P<< "asiento(s), por el valor de"<<3000*P<<"C"<<endl;
+								cout <<"\t1.Si"<<endl;
+								cout <<"\t2.No"<<endl;
+								cin>>RF;
+								if (RF==1)
+								{
+									cout <<"Disfurte su película"<<endl;
+									Sleep(4000);
+									goto final;
+								}
+								else
+								{
+									cout <<"Usted quiere:"<<endl;
+									cout <<"\t1.Volver al menú principal"<<endl;
+									cout <<"\t2.Cancelar toda la operación"<<endl;
+								system("cls");
+									if (O==2)
+										goto final;
+									else
+										goto menu;	
+							case 4:
+								system ("cls");
+								cout <<"Usted eligió la función de las 20:45 p.m"<<endl;
+								asientos ();
+								cout <<"\tPorfavor confirme los siguientes datos:"<<endl;
+								cout <<"\tConfirmación de datos:/n"<<endl;
+								cout <<"\tUsted eligió alguna película4"<<endl;
+								cout <<"\tLa hora de inicio es a las 20:45 y el tipo de sala 2D"<<endl;
+								cout <<"\tReservó "<<P<< "asiento(s), por el valor de"<<3000*P<<"C"<<endl;
+								cout <<"\t1.Si"<<endl;
+								cout <<"\t2.No"<<endl;
+								cin>>RF;
+								if (RF==1)
+								{
+									cout <<"Disfurte su película"<<endl;
+									Sleep(4000);
+									goto final;
+								}
+								else
+								{
+									cout <<"Usted desea:"<<endl;
+									cout <<"\t1.Volver al menú principal"<<endl;
+									cout <<"\t2.Cancelar toda la operación"<<endl;
+								system("cls");
+									if (O==2)
+										goto final;
+									else
+										goto menu;
+						}
+						break;
+					default:
+						goto menuOP;				
+					}	
+					break;
+				//default:
+				menuOP:
+						cout <<"Usted selecciono una opción invalida"<<endl;
+						cout <<"¿Desea volver al menu?"<<endl;
+						cout <<"\t1.Si" <<endl;
+						cout <<"\t2.No" <<endl;
+						cout <<"     ";cin>>X;
+						if (X==1)
+							goto menu;
+						else
+						{
+							cout <<"Gracias por su visita"<<endl;
+							goto final;
+						}
+				}
+				final:
+			system ("cls");
+			system ("pause");
+			return 0;
+		}
+	}
+}
+
+		
+int asientos (void)
+{
+	int i,x,l,j,m,z,r,o,a,y;
+	int columna[9]={1,2,3,4,5,6,7,8,9}, Matriz [9][16]={ 0 };
+	string Filas [13]={" ","1","2","3","4","5","6","7","8","9","10","11","12"};
+	int TIP, FUN;
+	sillas:
+		cout <<"\tAsientos vacios=0"<<endl;
+		cout <<"\tSolamente selecciones asientos vacios"<<endl;
+		for (i=0;i<13;i++)
+		{
+			cout <<"\t"<<Filas [i];
+		}
+		cout <<endl;
+		for (i=0;i<9;i++)
+		{
+			cout <<"\t"<<Columna [i];
+			for (j=0; j<12;j++)
+			{
+				cout <<"\t"<<Matriz [i][j];
+			}
+			cout <<endl;
+		}
+		cout <<"\t Sus asientos a reservar (máximo 4) "<<endl;
+		Sleep (3000);
+		cout <<"\t¿Cuántos asientos desea?"; cin>>l;
+		if (l>0 && l<=10)
+		{
+			for (z=1;z>=l;z++)
+			{
+				//p++;
+				asi:
+					cout <<"\t¿Que ubicación quiere?"<<endl;
+					cout <<"\tFilas: "; cin>>x;
+					cout <<"\tColumna: ";cin>>M;
+					if (Matriz [x-1][m-1]==0)
+					{
+						if ((x>0 && x<=0)&&(m>=16))
+						{
+							for (i=0; i<9;i++)
+							{
+								for (j=0;j<16;j++)
+								{
+									Matriz [x-1][m-1]=1;
+								}
+							}
+						}
+						else
+					{
+						cout <<"Este asiento no existe"<<endl;
+						goto menu1;
+					}
+					}
+					else
+					{
+						cout <<"Este asiento no existe"<<endl;
+						cout <<"Usted quiere: "<<endl;
+						cout <<"\t1. Volver a escoger asientos"<<endl;
+						cout <<"\t2. Cancelar la operación"<<endl;
+						if (0==2)
+						{
+							system ("pause");
+							return 0;
+						}
+		
+							
+					}
+				}
+			}
+		else
+		{
+			cout <<"Recuerde que el máximo de asientos son 4" <<endl;
+			system ("cls");
+			goto sillas;
+		}
+		Sleep (2000);
+		system ("cls");
+		cout <<"Porfavor confirme sus asientos"<<endl;
+		cout <<"Los asientos vacios se representacon con 0"<<endl;
+		for (i=0; i<13;i++)
+		{
+			cout <<"\t" <<Filas[i];
+		}
+		cout <<endl;
+		for (i=0; i<9; i++)
+		{
+			cout <<"\t"<<Columna [i];
+			for (j=0; j<12;j++)
+			{
+				cout <<"\t"<<Matriz[i][j];
+			}
+			cout <<endl;
+		}
+		cout <<"¿Son correctos sus asientos?"<<endl;
+		cout <<"\t1. Si" <<endl;
+		cout <<"\t2. No"<<endl;
+		cout <<"\t"; cin>>r;
+		switch (r)
+		{
+			case 1:
+				despedida:
+					return 0;
+					system ("pause");
+					break;
+			case 2:
+				menu1:
+					cout <<"Usted quiere: "<<endl;
+					cout <<"\t1.Volver a escoger sus asientos"<<endl;
+					cout<<"\t2. Cancelar la opreación"<<endl;
+					cout <<"\t"; cin>>o;
+					system ("cls");
+					if (o==2)
+					{
+						system ("pause");
+						return 0;
+					}
+					else 
+					goto sillas;
+				default:
+					cout <<"Datos invalidos"<<endl;
+					goto despedida;
+					return i,x,l,j,m,z,o,a,y,TIP,FUN;
+		}
+return 0;
+}
